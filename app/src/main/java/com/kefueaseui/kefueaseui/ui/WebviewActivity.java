@@ -81,7 +81,7 @@ public class WebviewActivity extends BaseActivity {
 //自适应屏幕
         webview.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         webview.loadUrl("http://172.17.1.23/web-kefu/new1.html");
-        webview.reload();
+//        webview.reload();
         webview.setWebViewClient(new WebViewClient() {
 
             @Override
