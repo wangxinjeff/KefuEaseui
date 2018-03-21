@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:easemob="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hyphenate.helpdesk.easeui.widget.TitleBar
+        android:id="@+id/title_bar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        easemob:titleBarLeftImage="@drawable/hd_mm_title_back" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="姓名"
+        android:id="@+id/lv_name"
+        android:layout_marginTop="30dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="电话"
+        android:id="@+id/lv_phone"
+        android:layout_marginTop="30dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="邮箱"
+        android:id="@+id/lv_mail"
+        android:layout_marginTop="30dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="内容"
+        android:id="@+id/lv_content"
+        android:layout_marginTop="30dp"
+        />
+</LinearLayout>

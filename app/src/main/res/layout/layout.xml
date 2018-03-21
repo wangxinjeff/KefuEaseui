@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:civ="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/act"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/pwd"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/act"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="登录"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_btn"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/pwd"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="注册"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/regest_btn"
+        android:layout_below="@+id/login_btn"
+        android:layout_marginTop="20dp" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+//必须
+apply plugin: 'kotlin-android'
+//快捷的findviewfindid操作，建议加上
+apply plugin: 'kotlin-android-extensions'
+//一些基于注解的java库可能用得上，建议加上
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.kefueaseui.kefueaseui"
+        minSdkVersion 14
+            targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+//            main.java.srcDirs += 'src/main/kotlin'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    /**
+     * 签名设置
+     */
+//    signingConfigs {
+//        release {
+//            storeFile file('android.keystore')
+//            keyAlias "123"
+//            keyPassword "123456"
+//            storePassword "123456"
+//        }
+//    }
+    buildTypes {
+//        debug{//测试下的配置
+//            minifyEnabled false
+//            shrinkResources false
+//            signingConfig  signingConfigs.release
+//        }
+        release {//正式的配置
+            minifyEnabled false  // false表示不混淆，true表示混淆
+//            shrinkResources true //移除无用的resource文件
+//            //如果用eclipse里面的proguard.cfg，直接替换 proguard-rules.pro 即可
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig  signingConfigs.release
+        }
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'org.jetbrains.anko:anko-common:0.9'
+    compile project(':bottomnavigation')
+    compile project(':kefu-easeui')
+    compile 'com.jude:easyrecyclerview:4.0.6'
+    compile 'com.daimajia.numberprogressbar:library:1.2@aar'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'io.reactivex:rxjava:1.2.2'
+    compile 'io.reactivex:rxandroid:1.2.1'
+//    compile 'com.wefika:flowlayout:0.4.0'
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:design:25.1.1'
+    testCompile 'junit:junit:4.12'
+}

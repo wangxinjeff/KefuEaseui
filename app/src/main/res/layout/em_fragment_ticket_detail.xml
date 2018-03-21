@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:easemob="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFF4"
+    android:orientation="vertical">
+
+    <com.hyphenate.helpdesk.easeui.widget.TitleBar
+    android:id="@+id/title_bar"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    easemob:titleBarLeftImage="@drawable/hd_mm_title_back" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+<!--
+        <include
+            android:id="@+id/layout_editview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            layout="@layout/layout_editview"
+            />-->
+        <Button
+            android:id="@+id/button_reply"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/holo_red_light"
+            android:layout_alignParentBottom="true"
+            android:text="回复"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
+
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:cacheColorHint="@android:color/transparent">
+        </ListView>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
